@@ -6,10 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  passwordLength = 0;
   includeLetters = false;
   includeNumbers = false;
   includeSymbols = false;
   password = '';
+
+  onChangeLength(eventTarget: EventTarget): void {
+    const value = (eventTarget as HTMLInputElement).value;
+
+    const parsedValue = parseInt(value);
+
+    if (!isNaN(parsedValue)) {
+      this.passwordLength = parsedValue;
+    }
+  }
 
   onChangeUseLetters() {
     this.includeLetters = !this.includeLetters;
