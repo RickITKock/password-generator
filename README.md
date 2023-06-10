@@ -1,5 +1,7 @@
 # PasswordGenerator
 
+Just a simple password generator using numbers, letters, and symbols.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server
